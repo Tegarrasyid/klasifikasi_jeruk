@@ -21,7 +21,7 @@ warna = st.pills("Warna", ["hijau", "kuning", "oranye"], default="hijau")
 musim_panen = st.pills("Musim Panen", ["hujan", "kemarau"], default="hujan")
 
 if st.button("Prediksi", type="primary"):
-	data = pd.DataFrame([[diameter,berat,tebal_kulit,kadar_gula,asal_daerah,warna,musim_panen]], columns=["diameter", "berat", "tebal_kulit", "kadar_gula", "asal_daerah", "warna", "musim_panen"])
+	data = pd.DataFrame([[diameter,berat,tebal_kulit,kadar_gula,asal_daerah,warna,musim_panen]], columns=["diameter","berat","tebal_kulit","kadar_gula","asal_daerah","warna","musim_panen"])
 	prediksi = model.predict(data)[0]
 	presentase = max(model.predict_proba(data)[0])
 	st.success(f"Model memprediksi {prediksi} dengan tingkat keyakinan {presentase*100:.2f}%")
@@ -30,3 +30,4 @@ if st.button("Prediksi", type="primary"):
 st.divider()
 
 st.caption("Dibuat dengan :tangerine: oleh **Tegar Rasyid Al Aziz**")
+
