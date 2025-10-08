@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-model = joblib.load(model_klasifikasi_jeruk.joblib)
+model = joblib.load("model_klasifikasi_jeruk.joblib")
 
 st.set_page_config(
 	page_title="Klasifikasi Jeruk",
@@ -28,4 +28,5 @@ if st.button("Prediksi", type="primary"):
 	st.balloons()
 
 st.divider()
+
 st.caption("Dibuat dengan :tangerine: oleh **Tegar Rasyid Al Aziz**")
