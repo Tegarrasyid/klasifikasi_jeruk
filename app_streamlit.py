@@ -13,7 +13,7 @@ st.title(":tangerine: Klasifikasi Jeruk")
 st.markdown("Aplikasi machine learning untuk klasifikasi jeruk bagus, sedang atau jelek")
 
 diameter = st.slider("Diameter", 5.0, 8.0, 6.0)
-Berat = st.slider("Berat", 80.0, 225.0, 100.0)
+berat = st.slider("Berat", 80.0, 225.0, 100.0)
 tebal_kulit = st.slider("Tebal Kulit", 0.1, 1.2, 0.4)
 kadar_gula = st.slider("Kadar Gula", 5.0, 14.0, 9.0)
 asal_daerah = st.pills("Asal Daerah", ["Kalimantan", "Jawa Tengah", "Jawa Barat"], default="Kalimantan")
@@ -30,4 +30,5 @@ if st.button("Prediksi", type="primary"):
 st.divider()
 
 st.caption("Dibuat dengan :tangerine: oleh **Tegar Rasyid Al Aziz**")
+
 
